@@ -1,0 +1,42 @@
+<% include header.ejs %>
+   
+  <% if(typeof(session.usuario) == "undefined"){ %>
+  <ul class='menu'>
+        <li><a href='/usuario/login'>Login</a></li>
+        <li><a href='/usuario/cadastro'>Cadastro</a></li>
+  </ul>
+  <% }else{ %>
+  <ul class='menu'>
+        <li><a href='/usuario/logout'>Logout (@<%= session.usuario.nickname %>)</a></li>
+  </ul>
+  <form action="/nweet/submit" method="POST">
+        <label>Insira aqui seu Nweet (140 caracteres)!</label>
+        <textarea name='nweet[texto]' id='nweet_texto'></textarea>
+        <input type='submit' value='Nweet!' />
+  </form>
+  <% } %>
+   
+  <% if(typeof(nweets) != "undefined"){ %>
+        <ul>
+        <% for(var index in nweets){ %>
+              <%
+                    if(nweets[index].autor != null ){
+                    var dataFormatada = new Date(nweets[index].data);
+              %>
+              <li>
+                    <p>@<%= nweets[index].autor.nickname %>: <%= nweets[index].texto %></p>
+                    <p class='publish_date'><%=
+                          dataFormatada.getHours() + ":" +
+                          dataFormatada.getMinutes() + " " +
+                          dataFormatada.getDate() + "/"  +
+                          (dataFormatada.getMonth() + 1 )
+                    %></p>
+              </li>
+              <% } %>
+  <%    
+        }
+  %>
+  </ul>
+  <% } %>
+   
+  <% include footer.ejs %>
