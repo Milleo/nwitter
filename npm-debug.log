@@ -1,0 +1,173 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'express@3.4.4' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 verbose node symlink /usr/bin/node
+5 verbose cache add [ 'express@3.4.4', null ]
+6 verbose cache add name=undefined spec="express@3.4.4" args=["express@3.4.4",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'express@3.4.4',
+7 verbose parsed url   path: 'express@3.4.4',
+7 verbose parsed url   href: 'express@3.4.4' }
+8 verbose cache add name="express" spec="3.4.4" args=["express","3.4.4"]
+9 verbose parsed url { protocol: null,
+9 verbose parsed url   slashes: null,
+9 verbose parsed url   auth: null,
+9 verbose parsed url   host: null,
+9 verbose parsed url   port: null,
+9 verbose parsed url   hostname: null,
+9 verbose parsed url   hash: null,
+9 verbose parsed url   search: null,
+9 verbose parsed url   query: null,
+9 verbose parsed url   pathname: '3.4.4',
+9 verbose parsed url   path: '3.4.4',
+9 verbose parsed url   href: '3.4.4' }
+10 verbose addNamed [ 'express', '3.4.4' ]
+11 verbose addNamed [ '3.4.4', '3.4.4' ]
+12 silly lockFile edcc27a2-express-3-4-4 express@3.4.4
+13 verbose lock express@3.4.4 /home/milleo/.npm/edcc27a2-express-3-4-4.lock
+14 verbose request where is /express
+15 verbose request registry https://registry.npmjs.org/
+16 verbose request id 063f4244e0b851a3
+17 verbose url raw /express
+18 verbose url resolving [ 'https://registry.npmjs.org/', './express' ]
+19 verbose url resolved https://registry.npmjs.org/express
+20 verbose request where is https://registry.npmjs.org/express
+21 info trying registry request attempt 1 at 13:13:18
+22 verbose etag "7FVLRT9Y9RQJKGVQC7099FKQ4"
+23 http GET https://registry.npmjs.org/express
+24 http 200 https://registry.npmjs.org/express
+25 silly registry.get cb [ 200,
+25 silly registry.get   { date: 'Mon, 13 Oct 2014 16:13:19 GMT',
+25 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+25 silly registry.get     etag: '"938BMKRI8HLOWHPTMV2P60UUC"',
+25 silly registry.get     'content-type': 'application/json',
+25 silly registry.get     'cache-control': 'max-age=60',
+25 silly registry.get     'content-length': '390871',
+25 silly registry.get     'accept-ranges': 'bytes',
+25 silly registry.get     via: '1.1 varnish',
+25 silly registry.get     age: '45',
+25 silly registry.get     'x-served-by': 'cache-atl6225-ATL',
+25 silly registry.get     'x-cache': 'HIT',
+25 silly registry.get     'x-cache-hits': '1',
+25 silly registry.get     'x-timer': 'S1413216799.047440,VS0,VE4',
+25 silly registry.get     vary: 'Accept',
+25 silly registry.get     'keep-alive': 'timeout=10, max=50',
+25 silly registry.get     connection: 'Keep-Alive' } ]
+26 silly lockFile 7d03e4c5-js-org-express-express-3-4-4-tgz https://registry.npmjs.org/express/-/express-3.4.4.tgz
+27 verbose lock https://registry.npmjs.org/express/-/express-3.4.4.tgz /home/milleo/.npm/7d03e4c5-js-org-express-express-3-4-4-tgz.lock
+28 verbose addRemoteTarball [ 'https://registry.npmjs.org/express/-/express-3.4.4.tgz',
+28 verbose addRemoteTarball   '0b63ae626c96b71b78d13dfce079c10351635a86' ]
+29 info retry fetch attempt 1 at 13:13:20
+30 verbose fetch to= /tmp/npm-4563-5PbJVSYE/registry.npmjs.org/express/-/express-3.4.4.tgz
+31 http GET https://registry.npmjs.org/express/-/express-3.4.4.tgz
+32 http 200 https://registry.npmjs.org/express/-/express-3.4.4.tgz
+33 silly lockFile 7d03e4c5-js-org-express-express-3-4-4-tgz https://registry.npmjs.org/express/-/express-3.4.4.tgz
+34 silly lockFile 7d03e4c5-js-org-express-express-3-4-4-tgz https://registry.npmjs.org/express/-/express-3.4.4.tgz
+35 silly lockFile edcc27a2-express-3-4-4 express@3.4.4
+36 silly lockFile edcc27a2-express-3-4-4 express@3.4.4
+37 silly resolved [ { name: 'express',
+37 silly resolved     description: 'Sinatra inspired web development framework',
+37 silly resolved     version: '3.4.4',
+37 silly resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+37 silly resolved     contributors: [ [Object], [Object], [Object], [Object] ],
+37 silly resolved     dependencies:
+37 silly resolved      { connect: '2.11.0',
+37 silly resolved        commander: '1.3.2',
+37 silly resolved        'range-parser': '0.0.4',
+37 silly resolved        mkdirp: '0.3.5',
+37 silly resolved        cookie: '0.1.0',
+37 silly resolved        'buffer-crc32': '0.2.1',
+37 silly resolved        fresh: '0.2.0',
+37 silly resolved        methods: '0.1.0',
+37 silly resolved        send: '0.1.4',
+37 silly resolved        'cookie-signature': '1.0.1',
+37 silly resolved        debug: '*' },
+37 silly resolved     devDependencies:
+37 silly resolved      { ejs: '*',
+37 silly resolved        mocha: '*',
+37 silly resolved        jade: '0.30.0',
+37 silly resolved        hjs: '*',
+37 silly resolved        stylus: '*',
+37 silly resolved        should: '2',
+37 silly resolved        'connect-redis': '*',
+37 silly resolved        marked: '*',
+37 silly resolved        supertest: '0.8.1 - 1' },
+37 silly resolved     keywords:
+37 silly resolved      [ 'express',
+37 silly resolved        'framework',
+37 silly resolved        'sinatra',
+37 silly resolved        'web',
+37 silly resolved        'rest',
+37 silly resolved        'restful',
+37 silly resolved        'router',
+37 silly resolved        'app',
+37 silly resolved        'api' ],
+37 silly resolved     repository: { type: 'git', url: 'git://github.com/visionmedia/express' },
+37 silly resolved     main: 'index',
+37 silly resolved     bin: { express: './bin/express' },
+37 silly resolved     scripts: { prepublish: 'npm prune', test: 'make test' },
+37 silly resolved     engines: { node: '*' },
+37 silly resolved     bugs: { url: 'https://github.com/visionmedia/express/issues' },
+37 silly resolved     homepage: 'https://github.com/visionmedia/express',
+37 silly resolved     _id: 'express@3.4.4',
+37 silly resolved     dist:
+37 silly resolved      { shasum: '0b63ae626c96b71b78d13dfce079c10351635a86',
+37 silly resolved        tarball: 'http://registry.npmjs.org/express/-/express-3.4.4.tgz' },
+37 silly resolved     _from: 'express@3.4.4',
+37 silly resolved     _npmVersion: '1.3.13',
+37 silly resolved     _npmUser: { name: 'jongleberry', email: 'jonathanrichardong@gmail.com' },
+37 silly resolved     maintainers: [ [Object], [Object] ],
+37 silly resolved     directories: {},
+37 silly resolved     _shasum: '0b63ae626c96b71b78d13dfce079c10351635a86',
+37 silly resolved     _resolved: 'https://registry.npmjs.org/express/-/express-3.4.4.tgz' } ]
+38 info install express@3.4.4 into /usr/lib
+39 info installOne express@3.4.4
+40 verbose lib/node_modules/express unbuild
+41 verbose tar unpack /home/milleo/.npm/express/3.4.4/package.tgz
+42 silly lockFile ce544511-tar-usr-lib-node-modules-express tar:///usr/lib/node_modules/express
+43 verbose lock tar:///usr/lib/node_modules/express /home/milleo/.npm/ce544511-tar-usr-lib-node-modules-express.lock
+44 silly lockFile 9fd3c46e-eo-npm-express-3-4-4-package-tgz tar:///home/milleo/.npm/express/3.4.4/package.tgz
+45 verbose lock tar:///home/milleo/.npm/express/3.4.4/package.tgz /home/milleo/.npm/9fd3c46e-eo-npm-express-3-4-4-package-tgz.lock
+46 silly gunzTarPerm modes [ '775', '664' ]
+47 error Error: EACCES, mkdir '/usr/lib/node_modules/express'
+47 error  { [Error: EACCES, mkdir '/usr/lib/node_modules/express']
+47 error   errno: 3,
+47 error   code: 'EACCES',
+47 error   path: '/usr/lib/node_modules/express',
+47 error   fstream_type: 'Directory',
+47 error   fstream_path: '/usr/lib/node_modules/express',
+47 error   fstream_class: 'DirWriter',
+47 error   fstream_stack:
+47 error    [ '/usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+47 error      '/usr/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+47 error      'Object.oncomplete (fs.js:107:15)' ] }
+48 error Please try running this command again as root/Administrator.
+49 error System Linux 3.13.0-37-generic
+50 error command "/usr/bin/node" "/usr/bin/npm" "install" "-g" "express@3.4.4"
+51 error cwd /var/www/DevMedia/artigo_node
+52 error node -v v0.10.32
+53 error npm -v 1.4.28
+54 error path /usr/lib/node_modules/express
+55 error fstream_path /usr/lib/node_modules/express
+56 error fstream_type Directory
+57 error fstream_class DirWriter
+58 error code EACCES
+59 error errno 3
+60 error stack Error: EACCES, mkdir '/usr/lib/node_modules/express'
+61 error fstream_stack /usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+61 error fstream_stack /usr/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+61 error fstream_stack Object.oncomplete (fs.js:107:15)
+62 verbose exit [ 3, true ]
