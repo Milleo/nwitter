@@ -1,6 +1,6 @@
 <% include header.ejs %>
 
-<% if(typeof(session.usuario) == "undefined"){ %>
+<% if(typeof(session) == "undefined"){ %>
 <ul class='menu'>
 	<li><a href='/usuario/login'>Login</a></li>
 	<li><a href='/usuario/cadastro'>Cadastro</a></li>

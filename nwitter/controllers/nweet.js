@@ -7,7 +7,7 @@ module.exports = function(app){
 
 			var errors = req.validationErrors();
 
-			if(errors){
+			if(errors || typeof(req.session.usuario) == "undefined"){
 	    		res.render("index", {'errors': errors});
 	    	}else{
 	    		var nweetModel = app.models.nweet;
