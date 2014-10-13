@@ -1,10 +1,11 @@
 var express = require('express');
 var load = require('express-load');
+var expressValidator = require("express-validator");
 var http = require('http');
 var path = require('path');
 var mongoose = require('mongoose');
-var expressValidator = require("express-validator");
 
+global.db = mongoose.connect("mongodb://localhost/nwitter");
 
 var app = express();
 
@@ -15,7 +16,7 @@ app.set('view engine', 'ejs');
 app.use(expressValidator());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.cookieParser());
-app.use(express.session({'secret': 'webmagazine'}));
+app.use(express.session({'secret': 'seuSegredoAqui'}));
 app.use(express.bodyParser());
 app.use(app.router);
 
@@ -25,5 +26,5 @@ then('routes').
 into(app);
 
 http.createServer(app).listen(app.get('port'), function(){
-console.log('Express server listening on port ' + app.get('port'));
+  console.log('Express server listening on port ' + app.get('port'));
 });

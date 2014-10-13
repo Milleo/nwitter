@@ -1,0 +1,9 @@
+<% if(typeof(errors) != "undefined"){ %>
+	<ul>
+	<% for(var error in errors){ %>
+	<li><%= errors[error].msg %></li>
+<%	
+	}
+%>
+	</ul>
+<% } %>
