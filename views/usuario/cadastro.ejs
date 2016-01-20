@@ -1,13 +1,12 @@
 <% include ../header.ejs %>
 <% include ../errorlist.ejs %>
-<form action='/usuario/cadastro' method='POST'>
-	<label for="usuario_nome">Nome:</label><input type='text' name='usuario[nome]' id='usuario_nome' />
-	<label for="usuario_nickname">Nickname: @</label><input type='text' name='usuario[nickname]' id='usuario_nickname'/>
-	<label for="usuario_email">E-mail:</label><input type='text' name='usuario[email]' id='usuario_email'/>
-	<label for="usuario_senha">Senha:</label><input type='password' name='usuario[senha]' id='usuario_senha'/>
-	<label for="usuario_conf_senha">Confirmação de senha:</label><input type='password' name='usuario[conf_senha]' id='usuario_conf_senha'  />
+<form action='/usuario/cadastro' method='POST' class="form-horizontal col-sm-8 col-sm-offset-2">
+	<div class='form-group'><label for="usuario_nome">Nome</label><input type='text' name='usuario[nome]' id='usuario_nome'  class="form-control" /></div>
+	<div class='form-group'><label for="usuario_nickname">Nickname</label> <div class="input-group"><div class="input-group-addon">@</div><input type='text' name='usuario[nickname]' id='usuario_nickname'  class="form-control"/></div></div>
+	<div class='form-group'><label for="usuario_email">E-mail</label><input type='text' name='usuario[email]' id='usuario_email'  class="form-control"/></div>
+	<div class='form-group'><label for="usuario_senha">Senha</label><input type='password' name='usuario[senha]' id='usuario_senha'  class="form-control"/></div>
+	<div class='form-group'><label for="usuario_conf_senha">Confirmação de senha</label><input type='password' name='usuario[conf_senha]' id='usuario_conf_senha'  class="form-control"  /></div>
 
-	<input type='submit' value='Entrar' />
+	<div class='form-group'><input type='submit' value='Cadastrar' class='btn btn-success' /></div>
 </form>
-
 <% include ../footer.ejs %>
