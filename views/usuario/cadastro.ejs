@@ -1,12 +1,42 @@
 <% include ../header.ejs %>
 <% include ../errorlist.ejs %>
 <form action='/usuario/cadastro' method='POST' class="form-horizontal col-sm-8 col-sm-offset-2">
-	<div class='form-group'><label for="usuario_nome">Nome</label><input type='text' name='usuario[nome]' id='usuario_nome'  class="form-control" /></div>
-	<div class='form-group'><label for="usuario_nickname">Nickname</label> <div class="input-group"><div class="input-group-addon">@</div><input type='text' name='usuario[nickname]' id='usuario_nickname'  class="form-control"/></div></div>
-	<div class='form-group'><label for="usuario_email">E-mail</label><input type='text' name='usuario[email]' id='usuario_email'  class="form-control"/></div>
-	<div class='form-group'><label for="usuario_senha">Senha</label><input type='password' name='usuario[senha]' id='usuario_senha'  class="form-control"/></div>
-	<div class='form-group'><label for="usuario_conf_senha">Confirmação de senha</label><input type='password' name='usuario[conf_senha]' id='usuario_conf_senha'  class="form-control"  /></div>
 
-	<div class='form-group'><input type='submit' value='Cadastrar' class='btn btn-success' /></div>
+	<h1>Cadastro</h1>
+	<div class='form-group'>
+		<label for="usuario_nome" class='col-sm-3 control-label'>Nome</label>
+		<div class="col-sm-9">
+			<input type='text' name='usuario[nome]' id='usuario_nome'  class="form-control" />
+		</div>
+	</div>
+
+	<div class='form-group'>
+		<label for="usuario_nickname" class='col-sm-3 control-label'>Nickname</label>
+		<div class="col-sm-9">
+			<div class="input-group"><div class="input-group-addon">@</div><input type='text' name='usuario[nickname]' id='usuario_nickname'  class="form-control"/></div>
+		</div>
+	</div>
+
+	<div class='form-group'>
+		<label for="usuario_email" class='col-sm-3 control-label'>E-mail</label>
+		<div class="col-sm-9">
+			<input type='text' name='usuario[email]' id='usuario_email'  class="form-control"/>
+		</div>
+	</div>
+
+	<div class='form-group'>
+		<label for="usuario_senha" class='col-sm-3 control-label'>Senha</label>
+		<div class="col-sm-9">
+			<input type='password' name='usuario[senha]' id='usuario_senha'  class="form-control"/>
+		</div>
+	</div>
+
+	<div class='form-group'>
+		<label for="usuario_conf_senha" class='col-sm-3 control-label'>Confirmação de senha</label>
+		<div class="col-sm-9">
+			<input type='password' name='usuario[conf_senha]' id='usuario_conf_senha'  class="form-control"  />
+		</div>
+	</div>
+	<div class='text-right'><input type='submit' value='Cadastrar' class='btn btn-success' /></div>
 </form>
 <% include ../footer.ejs %>

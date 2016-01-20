@@ -22,14 +22,35 @@ body {
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
 
-.container {
+.footer .container {
 	line-height: 60px;
 	max-width: 680px;
 	padding: 0 15px;
 	width: auto;
 }
-.container .text-muted {
+.footer .container .text-muted {
   line-height: inherit;
   margin: 0;
   text-align: center;
+}
+
+#nweet_feed{
+  list-style: none;
+  padding: 0;
+}
+#nweet_feed li{
+  border:1px solid #CCC;
+  border-radius: 10px;
+  font-size:14px;
+  margin:10px 0;
+  padding:20px;
+  padding-right: 70px;
+  position:relative;
+}
+#nweet_feed li .publish_date{
+  font-style: italic;
+  font-size:10px;
+  position: absolute;
+  right:10px;
+  top:10px;
 }

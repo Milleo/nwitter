@@ -1,42 +1,48 @@
 <% include header.ejs %>
-
-<% if(typeof(session) == "undefined"){ %>
-<ul class='menu'>
-	<li><a href='/usuario/login'>Login</a></li>
-	<li><a href='/usuario/cadastro'>Cadastro</a></li>
-</ul>
-<% }else{ %>
-<ul class='menu'>
-	<li><a href='/usuario/logout'>Logout (@<%= session.usuario.nickname %>)</a></li>
-</ul>
-<form action="/nweet/submit" method="POST">
-	<label>Insira aqui seu Nweet (140 caracteres)!</label>
-	<textarea name='nweet[texto]' id='nweet_texto'></textarea>
-	<input type='submit' value='Nweet!' />
-</form>
+<% if(typeof(session) != "undefined"){ %>
+<div class='row'>
+	<form action="/nweet/submit" method="POST" class='col-sm-4 col-sm-offset-4'>
+		<div class="form-group">
+			<label>Insira aqui seu Nweet (140 caracteres)!</label>
+			<textarea class="form-control" name='nweet[texto]' id='nweet_texto'></textarea>
+		</div>
+		<input type='submit' value='Nweet!' class='btn btn-primary' />
+	</form>
+</div>
 <% } %>
-
-<% if(typeof(nweets) != "undefined"){ %>
-	<ul>
-		<% for(var index in nweets){ %>
+<div class='row'>
+	<div  class='col-sm-4 col-sm-offset-4'>
+		<h2>Últimos Nweets</h2>
+		<% if(typeof(nweets) != "undefined"){ %>
+		<ul id='nweet_feed'>
+			<% for(var index in nweets){ %>
 			<%
-				if(nweets[index].autor != null ){
-				var dataFormatada = new Date(nweets[index].data);
+			if(nweets[index].autor != null ){
+			var dataFormatada = new Date(nweets[index].data);
+			var hora = dataFormatada.getHours().toString();
+			var minuto = dataFormatada.getMinutes().toString();
+			var dia = dataFormatada.getDate().toString();
+			var mes = (dataFormatada.getMonth() + 1 ).toString();
+
+			if(hora.length == 1)
+				hora = '0' + hora;
+			if(minuto.length == 1)
+				minuto = '0' + minuto;
+			if(dia.length == 1)
+				dia = '0' + dia;
+			if(mes.length == 1)
+				mes = '0' + mes;
 			%>
 			<li>
-				<p>@<%= nweets[index].autor.nickname %>: <%= nweets[index].texto %></p>
-				<p class='publish_date'><%=
-					dataFormatada.getHours() + ":" +
-					dataFormatada.getMinutes() + " " +
-					dataFormatada.getDate() + "/"  +
-					(dataFormatada.getMonth() + 1 )
-				%></p>
+				@<%= nweets[index].autor.nickname %>: <%= nweets[index].texto %>
+				<p class='publish_date text-muted'><%= hora + ':' + minuto + ' ' + dia + '/' + mes %></p>
 			</li>
 			<% } %>
-	<%	
-		}
-	%>
-	</ul>
-<% } %>
-
+			<%
+			}
+			%>
+		</ul>
+		<% } %>
+	</div>
+</div>
 <% include footer.ejs %>
